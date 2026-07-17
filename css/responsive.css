@@ -1,0 +1,966 @@
+/* ==================================================
+   GreatAgen — Responsive Styles
+   ================================================== */
+
+/* ---------- Large Desktop ---------- */
+@media (min-width: 1101px) {
+  :root {
+    --container: 1280px;
+  }
+
+  /* Keep headline exactly 2 equal lines while side-by-side */
+  .hero__title-line {
+    white-space: nowrap;
+  }
+
+  .hero__content {
+    padding-right: clamp(40px, 4vw, 72px);
+  }
+}
+
+/* ---------- Laptop / Medium Desktop ---------- */
+@media (max-width: 1199px) {
+  .hero__grid {
+    grid-template-columns: minmax(320px, 1fr) minmax(0, 1.2fr);
+    gap: 36px;
+  }
+
+  .hero__content {
+    padding-right: clamp(24px, 2.5vw, 40px);
+  }
+
+  .hero__title {
+    font-size: clamp(34px, 3.6vw, 44px);
+    line-height: 1.18;
+  }
+
+  .dashboard {
+    min-height: 0;
+  }
+
+  .dashboard__sidebar {
+    width: 132px;
+  }
+
+  .dashboard__link {
+    font-size: 10px;
+    padding: 7px 8px;
+  }
+
+  .analytics-panel {
+    padding: 36px clamp(20px, 4vw, 28px) 32px;
+  }
+
+  .analytics-stats {
+    gap: 10px;
+  }
+
+  .a-stat {
+    padding: 14px 12px 12px;
+  }
+
+  .a-stat__label {
+    font-size: 11px;
+  }
+
+  .a-stat__value {
+    font-size: 20px;
+  }
+
+  .analytics-grid {
+    grid-template-columns: minmax(0, 1.45fr) minmax(220px, 0.9fr);
+    gap: 14px;
+  }
+
+  .analytics-panel .chart-panel canvas {
+    height: 240px !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    padding: calc(var(--nav-h) + 48px) 0 64px;
+  }
+
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero__content {
+    max-width: 640px;
+    padding-right: 0;
+  }
+
+  .hero__title {
+    font-size: clamp(32px, 7vw, 46px);
+    line-height: 1.14;
+  }
+
+  .hero__title-line {
+    white-space: normal;
+  }
+
+  .hero__subtitle {
+    max-width: 38em;
+    font-size: 15px;
+  }
+
+  .hero__features {
+    gap: 10px 18px;
+  }
+
+  .dashboard {
+    max-width: 100%;
+    width: 100%;
+    min-height: 0;
+  }
+
+  .dashboard__sidebar {
+    width: 132px;
+  }
+
+  .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard__mid,
+  .dashboard__bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__ctas .btn--lg {
+    padding: 14px 26px;
+  }
+
+  .panel.chart-panel canvas {
+    height: 140px !important;
+  }
+
+  .agents-panel {
+    padding: 56px 32px;
+  }
+
+  .omni-panel {
+    padding: 56px 32px;
+    border-radius: 0;
+  }
+
+  .agents-layout {
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 24px;
+  }
+
+  .create-agent {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .role-grid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .role-card {
+    min-height: 108px;
+    aspect-ratio: 0.72;
+    padding: 12px 4px 10px;
+  }
+
+  .role-card h3 {
+    font-size: 10px;
+  }
+
+  .role-card__icon {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .agents-note {
+    max-width: none;
+    font-size: 13px;
+  }
+
+  .omni-layout {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.2fr);
+    gap: 20px;
+  }
+
+  .omni-visual {
+    grid-template-columns: minmax(0, 1fr) 160px;
+  }
+
+  .inbox-card {
+    grid-template-columns: 170px minmax(0, 1fr);
+  }
+
+  .inbox-card__list {
+    width: 170px;
+  }
+
+  .call-card__brand {
+    width: 48px;
+    height: 48px;
+  }
+
+  .call-card__number {
+    font-size: 12px;
+  }
+
+  .channel-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: 100%;
+  }
+
+  .voice-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  .voice-pulse {
+    grid-column: 1 / -1;
+    justify-self: center;
+    order: -1;
+    margin-top: 0;
+  }
+
+  .campaign-card {
+    grid-column: 1 / -1;
+    max-width: 320px;
+    justify-self: start;
+  }
+
+  .know-int-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .feature-card {
+    padding: 28px 22px 24px;
+  }
+
+  .icon-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px 8px;
+  }
+
+  .icon-tile__box,
+  .int-cat__box {
+    width: 56px;
+    height: 56px;
+  }
+
+  .analytics-panel {
+    padding: 32px clamp(20px, 4vw, 24px) 28px;
+  }
+
+  .analytics-panel__header {
+    max-width: none;
+    margin-bottom: 24px;
+  }
+
+  .analytics-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .a-stat__value {
+    font-size: 20px;
+  }
+
+  .analytics-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .analytics-panel .chart-panel canvas {
+    height: 220px !important;
+  }
+
+  .legend-inline {
+    flex-wrap: wrap;
+    gap: 10px 14px;
+  }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 900px) {
+  .agents-panel {
+    padding: 48px 24px;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .omni-panel {
+    padding: 48px 24px;
+    border-radius: 0;
+  }
+
+  .omni-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .omni-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .inbox-card {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #E8ECF4;
+  }
+
+  .inbox-card__list {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #E8ECF4;
+    flex-direction: row;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px;
+  }
+
+  .inbox-card__chat {
+    padding: 14px;
+  }
+
+  .inbox-card__item {
+    flex-shrink: 0;
+    width: auto;
+    min-width: 150px;
+  }
+
+  .call-card {
+    width: 100%;
+    max-width: none;
+    padding: 20px 16px;
+  }
+
+  .call-card__brand {
+    width: 72px;
+    height: 72px;
+  }
+
+  .agents-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .create-agent {
+    width: 100%;
+    max-width: 340px;
+    justify-self: start;
+  }
+
+  .role-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .role-card {
+    aspect-ratio: auto;
+    min-height: 120px;
+    max-width: none;
+    padding: 16px 8px;
+  }
+
+  .role-card h3 {
+    font-size: 12px;
+  }
+
+  .role-card__icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .nav {
+    position: fixed;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    background: rgba(7, 11, 24, 0.97);
+    backdrop-filter: blur(16px);
+    padding: 16px 24px 24px;
+    transform: translateY(-120%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+  }
+
+  .nav__item > a {
+    padding: 12px 14px;
+  }
+
+  .dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.04);
+    margin: 0 0 4px 12px;
+  }
+
+  .has-dropdown.is-open .dropdown {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-toggle.is-active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.is-active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .navbar__actions .btn--ghost {
+    display: none;
+  }
+
+  .metric-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard__mid,
+  .dashboard__bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .call-card {
+    width: 100%;
+    max-width: 280px;
+    align-self: flex-start;
+  }
+
+  .footer__cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section--analytics {
+    padding-top: 16px;
+    padding-bottom: 0;
+  }
+
+  .analytics-panel {
+    padding: 28px clamp(16px, 4vw, 20px) 22px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .analytics-panel__header {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .analytics-panel__header h2 {
+    font-size: clamp(22px, 5vw, 28px);
+  }
+
+  .analytics-panel__header p {
+    font-size: 14px;
+  }
+
+  .analytics-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .a-stat {
+    padding: 14px 12px 12px;
+  }
+
+  .a-stat:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .a-stat__label {
+    font-size: 11px;
+  }
+
+  .a-stat__value {
+    font-size: 20px;
+  }
+
+  .analytics-panel .chart-panel,
+  .analytics-panel .recs-panel {
+    padding: 16px;
+  }
+
+  .analytics-panel .chart-panel__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .analytics-panel .chart-panel canvas {
+    height: 200px !important;
+  }
+
+  .analytics-panel .recs-list {
+    gap: 14px;
+  }
+
+  .analytics-panel .recs-btn {
+    margin-top: 18px;
+  }
+
+  .workflow-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .workflow-flow {
+    gap: 6px;
+  }
+
+  .workflow-step {
+    flex: 0 0 auto;
+    min-width: 108px;
+    max-width: 120px;
+  }
+
+  .workflow-cta {
+    width: 100%;
+    max-width: 360px;
+    align-self: flex-start;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  :root {
+    --nav-h: 64px;
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+  .hero {
+    padding: calc(var(--nav-h) + 40px) 0 56px;
+  }
+
+  .logo__img {
+    height: 40px;
+    max-width: 140px;
+  }
+
+  .hero__title {
+    font-size: clamp(30px, 7.5vw, 38px);
+    line-height: 1.18;
+  }
+
+  .hero__title-line {
+    white-space: normal;
+  }
+
+  .hero__subtitle {
+    font-size: 15px;
+    max-width: none;
+  }
+
+  .hero__features {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero__ctas {
+    flex-direction: column;
+  }
+
+  .hero__ctas .btn {
+    width: 100%;
+  }
+
+  /* Compact icon-rail sidebar on phones */
+  .dashboard {
+    min-height: 0;
+    overflow-x: auto;
+  }
+
+  .dashboard__sidebar {
+    width: 52px;
+    padding: 12px 6px;
+    align-items: center;
+  }
+
+  .dashboard__brand {
+    justify-content: center;
+    padding: 0 0 12px;
+  }
+
+  .dashboard__brand-img {
+    max-width: 36px;
+    height: 28px;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .dashboard__link {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .dashboard__link span {
+    display: none;
+  }
+
+  .dashboard__main {
+    padding: 12px;
+    min-width: 280px;
+  }
+
+  .metric-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metric-card__value {
+    font-size: 15px;
+  }
+
+  .metric-card__trend {
+    font-size: 9px;
+  }
+
+  .conv-list__time {
+    display: none;
+  }
+
+  .role-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .role-card {
+    max-width: none;
+    min-height: 120px;
+  }
+
+  .agents-panel {
+    padding: 40px 16px;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .omni-panel {
+    padding: 40px 16px;
+    border-radius: 0;
+  }
+
+  .omni-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .omni-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow-x: auto;
+  }
+
+  .inbox-card {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #E8ECF4;
+  }
+
+  .inbox-card__list {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #E8ECF4;
+    flex-direction: row;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px;
+  }
+
+  .inbox-card__chat {
+    padding: 14px;
+  }
+
+  .inbox-card__item {
+    flex-shrink: 0;
+    width: auto;
+    min-width: 150px;
+  }
+
+  .call-card {
+    width: 100%;
+    max-width: none;
+  }
+
+  .call-card__brand {
+    width: 72px;
+    height: 72px;
+  }
+
+  .channel-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: none;
+    gap: 12px 8px;
+  }
+
+  .channel-item {
+    padding: 0;
+    font-size: 10px;
+  }
+
+  .channel-item__icon {
+    width: 44px;
+    height: 44px;
+    font-size: 15px;
+  }
+
+  .inbox-card__chat-head {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .inbox-card__chat-head strong {
+    font-size: 13px;
+  }
+
+  .call-card {
+    max-width: none;
+  }
+
+  .call-card__actions {
+    flex-direction: row;
+  }
+
+  .call-btn {
+    width: 44px;
+  }
+
+  .voice-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .voice-pulse {
+    order: 0;
+  }
+
+  .campaign-card {
+    max-width: none;
+    justify-self: stretch;
+  }
+
+  .icon-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px 6px;
+  }
+
+  .int-cats {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .int-logos {
+    grid-template-columns: 1.2fr repeat(4, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .int-logo--api {
+    flex-direction: row;
+    text-align: left;
+    max-width: none;
+    justify-self: start;
+  }
+
+  .int-cat__box,
+  .icon-tile__box {
+    width: 52px;
+    height: 52px;
+  }
+
+  .int-logo__mark {
+    width: 48px;
+    height: 48px;
+  }
+
+  .int-logo__mark i {
+    font-size: 28px;
+  }
+
+  .analytics-panel {
+    padding: 24px 16px 18px;
+    border-radius: 18px 18px 0 0;
+  }
+
+  .analytics-panel__header {
+    margin-bottom: 18px;
+  }
+
+  .analytics-stats {
+    gap: 8px;
+  }
+
+  .a-stat__value {
+    font-size: 18px;
+  }
+
+  .analytics-panel .chart-panel canvas {
+    height: 180px !important;
+  }
+
+  .recs-list li {
+    font-size: 12px;
+  }
+
+  .footer__top {
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .footer__cols {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  .section__header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .workflow-layout {
+    flex-direction: column;
+  }
+
+  .workflow-step {
+    min-width: 100px;
+    max-width: 110px;
+    padding: 16px 8px 14px;
+    font-size: 11px;
+  }
+
+  .workflow-cta {
+    width: 100%;
+    max-width: none;
+    padding: 22px 18px;
+  }
+
+  .navbar__actions .btn--gradient {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .donut-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ---------- Small Mobile ---------- */
+@media (max-width: 400px) {
+  .role-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .role-card {
+    max-width: none;
+  }
+
+  .icon-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px 10px;
+  }
+
+  .int-cats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px 10px;
+  }
+
+  .int-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 12px;
+  }
+
+  .int-logo--api {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    max-width: none;
+    justify-self: start;
+    text-align: left;
+  }
+
+  .metric-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section--analytics {
+    padding-bottom: 0;
+  }
+
+  .analytics-panel {
+    padding: 20px 14px 16px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .analytics-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .a-stat:last-child {
+    grid-column: auto;
+  }
+
+  .a-stat__value {
+    font-size: 22px;
+  }
+
+  .analytics-panel .chart-panel canvas {
+    height: 168px !important;
+  }
+
+  .analytics-panel .chart-panel__head h4,
+  .analytics-panel .recs-panel__title {
+    font-size: 14px;
+  }
+
+  .analytics-panel .legend-inline {
+    font-size: 11px;
+  }
+
+  .footer__cols {
+    grid-template-columns: 1fr;
+  }
+}

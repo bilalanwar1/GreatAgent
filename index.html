@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreatAgen — Enterprise AI Platform</title>
+  <meta name="description" content="The next generation of digital workforce. Deploy AI agents across every channel." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <!-- ========== NAVIGATION ========== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="logo">
+        <img src="assets/ga-logo.png" alt="GreatAgen — Real Impact." class="logo__img" />
+      </a>
+
+      <nav class="nav" id="navMenu" aria-label="Primary">
+        <ul class="nav__list">
+          <li class="nav__item has-dropdown">
+            <a href="#platform">Platform <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="dropdown">
+              <li><a href="#agents">AI Agents</a></li>
+              <li><a href="#omnichannel">Omnichannel</a></li>
+              <li><a href="#voice">AI Voice</a></li>
+              <li><a href="#workflow">Workflows</a></li>
+            </ul>
+          </li>
+          <li class="nav__item has-dropdown">
+            <a href="#solutions">Solutions <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="dropdown">
+              <li><a href="#agents">Customer Service</a></li>
+              <li><a href="#agents">Sales</a></li>
+              <li><a href="#voice">Collections</a></li>
+            </ul>
+          </li>
+          <li class="nav__item has-dropdown">
+            <a href="#resources">Resources <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="dropdown">
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">Case Studies</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="#pricing">Pricing</a></li>
+          <li class="nav__item has-dropdown">
+            <a href="#company">Company <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="dropdown">
+              <li><a href="#footer">About</a></li>
+              <li><a href="#footer">Careers</a></li>
+              <li><a href="#footer">Contact</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="#" class="btn btn--ghost">Log in</a>
+        <a href="#" class="btn btn--gradient">Get Started</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="platform">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__content fade-up">
+          <span class="badge">Enterprise AI Platform</span>
+          <h1 class="hero__title">
+            <span class="hero__title-line">The Next Generation </span>
+            <span class="hero__title-line">of <span class="text-gradient">Digital Workforce</span></span>
+          </h1>
+          <p class="hero__subtitle">
+            Create, manage, and operate AI Agents that communicate across any channel, automate workflows, and execute real business actions across your entire organization.
+          </p>
+          <div class="hero__ctas">
+            <a href="#" class="btn btn--gradient btn--lg">Get Started</a>
+            <a href="#" class="btn btn--outline btn--lg">
+              <i class="fa-solid fa-play"></i> Book a Demo
+            </a>
+          </div>
+          <ul class="hero__features">
+            <li><i class="fa-solid fa-circle-check"></i> No coding required</li>
+            <li><i class="fa-regular fa-clock"></i> Deploy in minutes</li>
+            <li><i class="fa-solid fa-shield-halved"></i> Enterprise secure</li>
+          </ul>
+        </div>
+
+        <!-- Dashboard Mockup -->
+        <div class="dashboard fade-up" id="dashboard" style="--delay: 0.15s">
+          <aside class="dashboard__sidebar">
+            <div class="dashboard__brand">
+              <img src="assets/ga-logo.png" alt="GreatAgen" class="dashboard__brand-img" />
+            </div>
+            <nav class="dashboard__nav">
+              <a href="#" class="dashboard__link is-active" title="Overview"><i class="fa-solid fa-table-cells-large"></i><span>Overview</span></a>
+              <a href="#" class="dashboard__link" title="AI Agents"><i class="fa-solid fa-robot"></i><span>AI Agents</span></a>
+              <a href="#" class="dashboard__link" title="Conversations"><i class="fa-solid fa-comments"></i><span>Conversations</span></a>
+              <a href="#" class="dashboard__link" title="Workflows"><i class="fa-solid fa-diagram-project"></i><span>Workflows</span></a>
+              <a href="#" class="dashboard__link" title="Knowledge"><i class="fa-solid fa-book"></i><span>Knowledge</span></a>
+              <a href="#" class="dashboard__link" title="Integrations"><i class="fa-solid fa-puzzle-piece"></i><span>Integrations</span></a>
+              <a href="#" class="dashboard__link" title="Analytics"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a>
+              <a href="#" class="dashboard__link" title="Settings"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+            </nav>
+          </aside>
+
+          <div class="dashboard__main">
+            <div class="dashboard__header">
+              <h3>Overview</h3>
+              <button type="button" class="dashboard__menu" aria-label="More options">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </button>
+            </div>
+
+            <div class="metric-grid">
+              <div class="metric-card">
+                <span class="metric-card__label">Total Conversations</span>
+                <span class="metric-card__value" data-count="32842">0</span>
+                <span class="metric-card__trend up">+18.6% vs last month</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-card__label">AI Resolved</span>
+                <span class="metric-card__value" data-count="24153">0</span>
+                <span class="metric-card__trend info">73.5% resolution rate</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-card__label">Avg. Response Time</span>
+                <span class="metric-card__value">1.2s</span>
+                <span class="metric-card__trend up">-28% vs last month</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-card__label">CSAT Score</span>
+                <span class="metric-card__value">4.8 / 5</span>
+                <span class="metric-card__trend info">+0.6 vs last month</span>
+              </div>
+            </div>
+
+            <div class="dashboard__mid">
+              <div class="panel chart-panel">
+                <div class="panel__head">
+                  <h4>Conversations</h4>
+                  <span class="panel__meta">This Month <i class="fa-solid fa-chevron-down"></i></span>
+                </div>
+                <canvas id="heroChart" width="400" height="180"></canvas>
+              </div>
+              <div class="panel top-agents-panel">
+                <div class="panel__head">
+                  <h4>Top AI Agents</h4>
+                  <a href="#" class="panel__link">View all</a>
+                </div>
+                <ul class="agent-list">
+                  <li>
+                    <span class="agent-list__avatar" style="background:#3B82F6"><i class="fa-solid fa-headset"></i></span>
+                    <div class="agent-list__info">
+                      <strong>Customer Support Agent</strong>
+                      <small>12,456</small>
+                      <span class="agent-list__bar"><span style="--w:92%"></span></span>
+                    </div>
+                    <span class="agent-list__rate">92%</span>
+                  </li>
+                  <li>
+                    <span class="agent-list__avatar" style="background:#38BDF8"><i class="fa-solid fa-chart-line"></i></span>
+                    <div class="agent-list__info">
+                      <strong>Sales Assistant</strong>
+                      <small>8,743</small>
+                      <span class="agent-list__bar"><span style="--w:88%"></span></span>
+                    </div>
+                    <span class="agent-list__rate">88%</span>
+                  </li>
+                  <li>
+                    <span class="agent-list__avatar" style="background:#8B5CF6"><i class="fa-solid fa-phone"></i></span>
+                    <div class="agent-list__info">
+                      <strong>Virtual Receptionist</strong>
+                      <small>6,231</small>
+                      <span class="agent-list__bar"><span style="--w:90%"></span></span>
+                    </div>
+                    <span class="agent-list__rate">90%</span>
+                  </li>
+                  <li>
+                    <span class="agent-list__avatar" style="background:#EC4899"><i class="fa-solid fa-hand-holding-dollar"></i></span>
+                    <div class="agent-list__info">
+                      <strong>Collections Agent</strong>
+                      <small>3,123</small>
+                      <span class="agent-list__bar"><span style="--w:85%"></span></span>
+                    </div>
+                    <span class="agent-list__rate">85%</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="dashboard__bottom">
+              <div class="panel donut-panel">
+                <div class="panel__head"><h4>Channel Distribution</h4></div>
+                <div class="donut-wrap">
+                  <canvas id="donutChart" width="120" height="120"></canvas>
+                  <ul class="donut-legend">
+                    <li><span class="dot" style="background:#FBBF24"></span>Chat <em>40%</em></li>
+                    <li><span class="dot" style="background:#3B82F6"></span>WhatsApp <em>25%</em></li>
+                    <li><span class="dot" style="background:#8B5CF6"></span>Phone <em>15%</em></li>
+                    <li><span class="dot" style="background:#EC4899"></span>Email <em>10%</em></li>
+                    <li><span class="dot" style="background:#94A3B8"></span>Others <em>10%</em></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel conv-panel">
+                <div class="panel__head">
+                  <h4>Recent Conversations</h4>
+                  <a href="#" class="panel__link">View all</a>
+                </div>
+                <ul class="conv-list">
+                  <li>
+                    <span class="conv-list__channel whatsapp"><i class="fa-brands fa-whatsapp"></i></span>
+                    <div class="conv-list__info">
+                      <strong>WhatsApp — John D.</strong>
+                      <small>Order status</small>
+                    </div>
+                    <span class="conv-list__time">2 min ago</span>
+                    <span class="status status--resolved">Resolved</span>
+                  </li>
+                  <li>
+                    <span class="conv-list__channel phone"><i class="fa-solid fa-phone"></i></span>
+                    <div class="conv-list__info">
+                      <strong>Phone — Sarah M.</strong>
+                      <small>Product support</small>
+                    </div>
+                    <span class="conv-list__time">5 min ago</span>
+                    <span class="status status--resolved">Resolved</span>
+                  </li>
+                  <li>
+                    <span class="conv-list__channel email"><i class="fa-solid fa-envelope"></i></span>
+                    <div class="conv-list__info">
+                      <strong>Email — David L.</strong>
+                      <small>Refund request</small>
+                    </div>
+                    <span class="conv-list__time">12 min ago</span>
+                    <span class="status status--resolved">Resolved</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 2: AI AGENTS ========== -->
+    <section class="section section--agents" id="agents">
+      <div class="container">
+        <div class="agents-panel fade-up">
+          <div class="agents-layout">
+            <div class="agents-main">
+              <header class="agents-header">
+                <span class="section__num">1</span>
+                <div>
+                  <h2>AI Agents for Every Role</h2>
+                  <p>Create AI Agents tailored to your business needs.</p>
+                </div>
+              </header>
+
+              <div class="role-grid">
+                <article class="role-card">
+                  <span class="role-card__icon" style="--bg:#EDE9FE;--fg:#7C3AED"><i class="fa-solid fa-headset"></i></span>
+                  <h3>Customer Service</h3>
+                </article>
+                <article class="role-card">
+                  <span class="role-card__icon" style="--bg:#DCFCE7;--fg:#16A34A"><i class="fa-solid fa-chart-line"></i></span>
+                  <h3>Sales Assistant</h3>
+                </article>
+                <article class="role-card">
+                  <span class="role-card__icon" style="--bg:#EDE9FE;--fg:#7C3AED"><i class="fa-solid fa-phone"></i></span>
+                  <h3>Virtual Receptionist</h3>
+                </article>
+                <article class="role-card">
+                  <span class="role-card__icon" style="--bg:#DBEAFE;--fg:#2563EB"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                  <h3>Technical Support</h3>
+                </article>
+                <article class="role-card">
+                  <span class="role-card__icon" style="--bg:#FEE2E2;--fg:#DC2626"><i class="fa-solid fa-dollar-sign"></i></span>
+                  <h3>Collections Agent</h3>
+                </article>
+                <article class="role-card">
+                  <span class="role-card__icon" style="--bg:#FFEDD5;--fg:#EA580C"><i class="fa-solid fa-box"></i></span>
+                  <h3>Order Management</h3>
+                </article>
+                <article class="role-card">
+                  <span class="role-card__icon" style="--bg:#CCFBF1;--fg:#0D9488"><i class="fa-solid fa-circle-check"></i></span>
+                  <h3>Task Manager</h3>
+                </article>
+                <article class="role-card">
+                  <span class="role-card__icon" style="--bg:#EDE9FE;--fg:#7C3AED"><i class="fa-solid fa-user"></i></span>
+                  <h3>Executive Assistant</h3>
+                </article>
+              </div>
+
+              <p class="agents-note">
+                Each AI Agent is fully configurable with knowledge, language, voice, permissions, business rules, and connections to your systems.
+              </p>
+            </div>
+
+            <form class="create-agent" id="createAgentForm">
+              <h3>Create New Agent</h3>
+              <label class="field">
+                <span>Agent Name</span>
+                <input type="text" value="Customer Support Agent" placeholder="Customer Support Agent" required />
+              </label>
+              <label class="field">
+                <span>Role</span>
+                <select>
+                  <option selected>Customer Service</option>
+                  <option>Sales Assistant</option>
+                  <option>Virtual Receptionist</option>
+                  <option>Technical Support</option>
+                  <option>Collections Agent</option>
+                  <option>Order Management</option>
+                  <option>Task Manager</option>
+                  <option>Executive Assistant</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Voice</span>
+                <div class="field__voice">
+                  <select>
+                    <option selected>Emma (Natural)</option>
+                    <option>James (Professional)</option>
+                    <option>Sofia (Friendly)</option>
+                    <option>Marcus (Calm)</option>
+                  </select>
+                  <button type="button" class="voice-play" aria-label="Preview voice"><i class="fa-solid fa-play"></i></button>
+                </div>
+              </label>
+              <label class="field">
+                <span>Language</span>
+                <select>
+                  <option selected>English</option>
+                  <option>English (UK)</option>
+                  <option>Spanish</option>
+                  <option>French</option>
+                  <option>German</option>
+                  <option>Arabic</option>
+                </select>
+              </label>
+              <button type="submit" class="btn btn--gradient btn--block">Create Agent</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 3: OMNICHANNEL ========== -->
+    <section class="section section--omnichannel" id="omnichannel">
+      <div class="container">
+        <div class="omni-panel fade-up">
+          <div class="omni-layout">
+            <div class="omni-main">
+              <header class="omni-header">
+                <span class="section__num">2</span>
+                <div>
+                  <h2>Omnichannel. One Platform.</h2>
+                  <p>Your AI Agents work across every channel — with one conversation, one history.</p>
+                </div>
+              </header>
+
+              <div class="channel-grid">
+                <div class="channel-item"><span class="channel-item__icon chat"><i class="fa-solid fa-comments"></i></span><span>Chat</span></div>
+                <div class="channel-item"><span class="channel-item__icon whatsapp"><i class="fa-brands fa-whatsapp"></i></span><span>WhatsApp</span></div>
+                <div class="channel-item"><span class="channel-item__icon email"><i class="fa-solid fa-envelope"></i></span><span>Email</span></div>
+                <div class="channel-item"><span class="channel-item__icon messenger"><i class="fa-brands fa-facebook-messenger"></i></span><span>Messenger</span></div>
+                <div class="channel-item"><span class="channel-item__icon instagram"><i class="fa-brands fa-instagram"></i></span><span>Instagram</span></div>
+                <div class="channel-item"><span class="channel-item__icon sms"><i class="fa-solid fa-message"></i></span><span>SMS</span></div>
+                <div class="channel-item"><span class="channel-item__icon api"><i class="fa-solid fa-code"></i></span><span>API</span></div>
+                <div class="channel-item"><span class="channel-item__icon phone"><i class="fa-solid fa-phone"></i></span><span>Phone</span></div>
+              </div>
+
+              <p class="omni-note">
+                Every interaction is stored, allowing customers to move across channels without repeating themselves.
+              </p>
+            </div>
+
+            <div class="omni-visual">
+              <div class="inbox-card">
+                <div class="inbox-card__list">
+                  <div class="inbox-card__item is-active">
+                    <span class="inbox-card__avatar wa"><i class="fa-brands fa-whatsapp"></i></span>
+                    <div>
+                      <strong>WhatsApp</strong>
+                      <small>Today, 10:30 AM</small>
+                    </div>
+                  </div>
+                  <div class="inbox-card__item">
+                    <span class="inbox-card__avatar ph"><i class="fa-solid fa-phone"></i></span>
+                    <div>
+                      <strong>Phone Call</strong>
+                      <small>Yesterday, 3:22 PM</small>
+                    </div>
+                  </div>
+                  <div class="inbox-card__item">
+                    <span class="inbox-card__avatar ch"><i class="fa-solid fa-comments"></i></span>
+                    <div>
+                      <strong>Web Chat</strong>
+                      <small>Yesterday, 1:15 PM</small>
+                    </div>
+                  </div>
+                  <div class="inbox-card__item">
+                    <span class="inbox-card__avatar em"><i class="fa-solid fa-envelope"></i></span>
+                    <div>
+                      <strong>Email</strong>
+                      <small>Mon, 9:45 AM</small>
+                    </div>
+                  </div>
+                  <div class="inbox-card__item">
+                    <span class="inbox-card__avatar ms"><i class="fa-brands fa-facebook-messenger"></i></span>
+                    <div>
+                      <strong>Messenger</strong>
+                      <small>Sun, 4:10 PM</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="inbox-card__chat">
+                  <div class="inbox-card__chat-head">
+                    <strong>Conversation with John D.</strong>
+                    <span class="status status--open">Open <i class="fa-solid fa-chevron-down"></i></span>
+                  </div>
+                  <div class="chat-bubbles">
+                    <div class="bubble bubble--user">I need help with my order</div>
+                    <div class="bubble bubble--agent">Sure! I can help you with that.</div>
+                    <div class="bubble bubble--user">Can you check the status?</div>
+                    <div class="bubble bubble--agent">Your order #12345 is on the way and will arrive tomorrow.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="call-card">
+                <div class="call-card__label">Incoming Call</div>
+                <div class="call-card__number">+1 (555) 123-4567</div>
+                <div class="waveform" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="call-card__brand">
+                  <img src="assets/ga-logo.png" alt="GreatAgen" class="call-card__brand-img" />
+                </div>
+                <div class="call-card__actions">
+                  <button class="call-btn call-btn--decline" type="button"><i class="fa-solid fa-phone-slash"></i></button>
+                  <button class="call-btn call-btn--accept" type="button"><i class="fa-solid fa-phone"></i></button>
+                </div>
+                <div class="call-card__action-labels">
+                  <span>Decline</span>
+                  <span>Accept</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 4: AI VOICE ========== -->
+    <section class="section section--white" id="voice">
+      <div class="container">
+        <header class="section__header section__header--sm fade-up">
+          <span class="section__num">3</span>
+          <div>
+            <h2>AI Voice First</h2>
+          </div>
+        </header>
+
+        <div class="voice-layout fade-up">
+          <div class="voice-list">
+            <h3>Inbound Calls</h3>
+            <ul class="check-list">
+              <li><i class="fa-solid fa-circle-check"></i> Answers incoming calls</li>
+              <li><i class="fa-solid fa-circle-check"></i> Understands natural language</li>
+              <li><i class="fa-solid fa-circle-check"></i> Identifies the caller</li>
+              <li><i class="fa-solid fa-circle-check"></i> Speaks with natural human-like voice</li>
+              <li><i class="fa-solid fa-circle-check"></i> Executes business actions</li>
+              <li><i class="fa-solid fa-circle-check"></i> Transfers to human when needed</li>
+              <li><i class="fa-solid fa-circle-check"></i> Summarizes &amp; updates systems</li>
+            </ul>
+          </div>
+
+          <div class="voice-pulse">
+            <div class="voice-pulse__rings" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="voice-pulse__icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+          </div>
+
+          <div class="voice-list">
+            <h3>Outbound Calls</h3>
+            <ul class="check-list">
+              <li><i class="fa-solid fa-circle-check"></i> Sales campaigns</li>
+              <li><i class="fa-solid fa-circle-check"></i> Lead follow-ups</li>
+              <li><i class="fa-solid fa-circle-check"></i> Appointment scheduling</li>
+              <li><i class="fa-solid fa-circle-check"></i> Reminders</li>
+              <li><i class="fa-solid fa-circle-check"></i> Collections</li>
+              <li><i class="fa-solid fa-circle-check"></i> Satisfaction surveys</li>
+              <li><i class="fa-solid fa-circle-check"></i> Subscription renewals</li>
+              <li><i class="fa-solid fa-circle-check"></i> Post-purchase follow-ups</li>
+            </ul>
+          </div>
+
+          <div class="campaign-card">
+            <h3>Call Campaign</h3>
+            <ul class="campaign-rows">
+              <li>
+                <span>Campaign</span>
+                <strong>Renewal Campaign</strong>
+              </li>
+              <li>
+                <span>Audience</span>
+                <strong>Expiring in 30 days</strong>
+              </li>
+              <li>
+                <span>Total Calls</span>
+                <strong>1,250</strong>
+              </li>
+              <li>
+                <span>Completed</span>
+                <strong>1,024 <em>(82%)</em></strong>
+              </li>
+              <li>
+                <span>Successful</span>
+                <strong>627 <em>(50%)</em></strong>
+              </li>
+            </ul>
+            <button type="button" class="btn btn--gradient btn--block campaign-card__btn">Start Campaign</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 5: WORKFLOW ========== -->
+    <section class="section section--workflow" id="workflow">
+      <div class="container">
+        <header class="section__header fade-up">
+          <span class="section__num">4</span>
+          <div>
+            <h2>No-Code Workflow Builder</h2>
+            <p>Design and automate any business process in minutes.</p>
+          </div>
+        </header>
+
+        <div class="workflow-layout fade-up">
+          <div class="workflow-flow">
+            <div class="workflow-step">
+              <span class="workflow-step__icon"><i class="fa-solid fa-phone"></i></span>
+              <span>Customer calls</span>
+            </div>
+            <span class="workflow-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+            <div class="workflow-step">
+              <span class="workflow-step__icon"><i class="fa-solid fa-robot"></i></span>
+              <span>AI Agent answers</span>
+            </div>
+            <span class="workflow-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+            <div class="workflow-step">
+              <span class="workflow-step__icon"><i class="fa-solid fa-ticket"></i></span>
+              <span>Creates support ticket</span>
+            </div>
+            <span class="workflow-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+            <div class="workflow-step">
+              <span class="workflow-step__icon"><i class="fa-solid fa-database"></i></span>
+              <span>Updates CRM</span>
+            </div>
+            <span class="workflow-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+            <div class="workflow-step">
+              <span class="workflow-step__icon whatsapp"><i class="fa-brands fa-whatsapp"></i></span>
+              <span>Sends WhatsApp</span>
+            </div>
+            <span class="workflow-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+            <div class="workflow-step">
+              <span class="workflow-step__icon"><i class="fa-solid fa-user"></i></span>
+              <span>Creates task for employee</span>
+            </div>
+            <span class="workflow-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+            <div class="workflow-step workflow-step--done">
+              <span class="workflow-step__icon"><i class="fa-solid fa-circle-check"></i></span>
+              <span>Completes workflow</span>
+            </div>
+          </div>
+
+          <div class="workflow-cta">
+            <p>Drag, drop, and connect actions without writing a single line of code.</p>
+            <a href="#" class="btn btn--outline-blue">
+              <i class="fa-solid fa-up-right-and-down-left-from-center"></i> Try Workflow Builder
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 6 & 7: KNOWLEDGE + INTEGRATIONS ========== -->
+    <section class="section section--know-int" id="knowledge">
+      <div class="container know-int-grid fade-up">
+        <div class="know-block feature-card">
+          <header class="feature-card__header">
+            <span class="section__num">5</span>
+            <div>
+              <h2>Connect Your Knowledge</h2>
+              <p>Bring all your knowledge sources into one place.</p>
+            </div>
+          </header>
+          <div class="icon-grid">
+            <div class="icon-tile"><span class="icon-tile__box"><i class="fa-solid fa-file-pdf" style="color:#DC2626"></i></span><span>PDF</span></div>
+            <div class="icon-tile"><span class="icon-tile__box"><i class="fa-solid fa-file-word" style="color:#2563EB"></i></span><span>Word</span></div>
+            <div class="icon-tile"><span class="icon-tile__box"><i class="fa-solid fa-file-excel" style="color:#16A34A"></i></span><span>Excel</span></div>
+            <div class="icon-tile"><span class="icon-tile__box"><i class="fa-solid fa-globe" style="color:#2563EB"></i></span><span>Websites</span></div>
+            <div class="icon-tile"><span class="icon-tile__box"><i class="fa-brands fa-google-drive" style="color:#4285F4"></i></span><span>Google Drive</span></div>
+            <div class="icon-tile"><span class="icon-tile__box"><i class="fa-brands fa-microsoft" style="color:#F25022"></i></span><span>Microsoft 365</span></div>
+            <div class="icon-tile"><span class="icon-tile__box"><i class="fa-solid fa-share-nodes" style="color:#038387"></i></span><span>SharePoint</span></div>
+            <div class="icon-tile"><span class="icon-tile__box"><i class="fa-solid fa-n" style="color:#111827"></i></span><span>Notion</span></div>
+            <div class="icon-tile"><span class="icon-tile__box"><i class="fa-brands fa-confluence" style="color:#2684FF"></i></span><span>Confluence</span></div>
+            <div class="icon-tile"><span class="icon-tile__box icon-tile__box--more"><i class="fa-solid fa-ellipsis" style="color:#94A3B8"></i></span><span>And more</span></div>
+          </div>
+          <p class="feature-card__footer">AI Agents use this knowledge to provide accurate and up-to-date answers.</p>
+        </div>
+
+        <div class="int-block feature-card" id="integrations">
+          <header class="feature-card__header">
+            <span class="section__num">6</span>
+            <div>
+              <h2>Integrations</h2>
+              <p>Connect GreatAgen with your favorite business systems.</p>
+            </div>
+          </header>
+
+          <div class="int-cats">
+            <div class="int-cat">
+              <span class="int-cat__box"><i class="fa-solid fa-user"></i></span>
+              <span>CRM</span>
+            </div>
+            <div class="int-cat">
+              <span class="int-cat__box"><i class="fa-solid fa-circle-nodes"></i></span>
+              <span>ERP</span>
+            </div>
+            <div class="int-cat">
+              <span class="int-cat__box"><i class="fa-solid fa-headset"></i></span>
+              <span>Help Desk</span>
+            </div>
+            <div class="int-cat">
+              <span class="int-cat__box"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+              <span>Accounting</span>
+            </div>
+            <div class="int-cat">
+              <span class="int-cat__box"><i class="fa-solid fa-credit-card"></i></span>
+              <span>Payments</span>
+            </div>
+          </div>
+
+          <div class="int-logos">
+            <div class="int-logo int-logo--api">
+              <span class="int-logo__icon"><i class="fa-solid fa-puzzle-piece"></i></span>
+              <span class="int-logo__text">Internal Apps<br />via API</span>
+            </div>
+            <div class="int-logo">
+              <span class="int-logo__mark salesforce"><i class="fa-brands fa-salesforce"></i></span>
+              <span>Salesforce</span>
+            </div>
+            <div class="int-logo">
+              <span class="int-logo__mark hubspot"><i class="fa-brands fa-hubspot"></i></span>
+              <span>HubSpot</span>
+            </div>
+            <div class="int-logo">
+              <span class="int-logo__mark zendesk"><i class="fa-solid fa-z"></i></span>
+              <span>Zendesk</span>
+            </div>
+            <div class="int-logo">
+              <span class="int-logo__mark more"><i class="fa-solid fa-ellipsis"></i></span>
+              <span>And more</span>
+            </div>
+          </div>
+
+          <p class="feature-card__footer">Seamless integration. Real-time actions. Full automation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 7: ANALYTICS ========== -->
+    <section class="section section--analytics" id="analytics">
+      <div class="container">
+        <div class="analytics-panel fade-up">
+          <header class="analytics-panel__header">
+            <span class="section__num">7</span>
+            <div>
+              <h2>Analytics &amp; Insights</h2>
+              <p>Monitor performance and continuously improve.</p>
+            </div>
+          </header>
+
+          <div class="analytics-stats">
+            <div class="a-stat">
+              <span class="a-stat__label">Total Conversations</span>
+              <strong class="a-stat__value" data-count="32842">0</strong>
+              <span class="a-stat__trend">+18.6%</span>
+            </div>
+            <div class="a-stat">
+              <span class="a-stat__label">AI Resolved</span>
+              <strong class="a-stat__value" data-count="24153">0</strong>
+              <span class="a-stat__trend">73.5%</span>
+            </div>
+            <div class="a-stat">
+              <span class="a-stat__label">Avg. Response Time</span>
+              <strong class="a-stat__value">1.2s</strong>
+              <span class="a-stat__trend">-28%</span>
+            </div>
+            <div class="a-stat">
+              <span class="a-stat__label">CSAT Score</span>
+              <strong class="a-stat__value">4.8 / 5</strong>
+              <span class="a-stat__trend">+0.6</span>
+            </div>
+            <div class="a-stat">
+              <span class="a-stat__label">Conversion Rate</span>
+              <strong class="a-stat__value">18.6%</strong>
+              <span class="a-stat__trend">+12%</span>
+            </div>
+          </div>
+
+          <div class="analytics-grid">
+            <div class="chart-panel">
+              <div class="chart-panel__head">
+                <h4>Performance Over Time</h4>
+                <div class="legend-inline">
+                  <span><i class="legend-dot legend-dot--blue"></i> Conversations</span>
+                  <span><i class="legend-dot legend-dot--green"></i> Resolved</span>
+                </div>
+              </div>
+              <canvas id="analyticsChart" width="640" height="280"></canvas>
+            </div>
+
+            <div class="recs-panel">
+              <h4 class="recs-panel__title">AI Recommendations</h4>
+              <ul class="recs-list">
+                <li>
+                  <span class="recs-list__icon" aria-hidden="true"></span>
+                  <span>Add more knowledge about shipping policies</span>
+                </li>
+                <li>
+                  <span class="recs-list__icon" aria-hidden="true"></span>
+                  <span>Improve response time for product support</span>
+                </li>
+                <li>
+                  <span class="recs-list__icon" aria-hidden="true"></span>
+                  <span>Consider automation for refund requests</span>
+                </li>
+              </ul>
+              <a href="#" class="recs-btn">View All Insights</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="#" class="logo logo--footer">
+          <img src="assets/ga-logo.png" alt="GreatAgen — Real Impact." class="logo__img" />
+        </a>
+        <div class="footer__social">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="#agents">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#integrations">Integrations</a></li>
+            <li><a href="#workflow">Workflows</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Compliance</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2024 GreatAgen. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
