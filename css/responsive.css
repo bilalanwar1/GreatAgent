@@ -147,13 +147,25 @@
   }
 
   .agents-layout {
-    grid-template-columns: minmax(0, 1fr) 260px;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 300px);
     gap: 24px;
+  }
+
+  .agents-aside {
+    max-width: 300px;
   }
 
   .create-agent {
     width: 100%;
-    max-width: 260px;
+    max-width: none;
+  }
+
+  .agent-steps__label strong {
+    font-size: 11px;
+  }
+
+  .live-preview__chat {
+    min-height: 132px;
   }
 
   .role-grid {
@@ -353,10 +365,40 @@
     gap: 28px;
   }
 
+  .agents-aside {
+    max-width: 420px;
+    justify-self: start;
+    width: 100%;
+  }
+
   .create-agent {
     width: 100%;
-    max-width: 340px;
-    justify-self: start;
+    max-width: none;
+    justify-self: stretch;
+  }
+
+  .agent-steps {
+    margin-bottom: 28px;
+  }
+
+  .agent-steps__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .knowledge-actions {
+    flex-direction: column;
+  }
+
+  .knowledge-btn {
+    width: 100%;
+    justify-content: flex-start;
+    min-height: 44px;
+  }
+
+  .live-preview,
+  .roi-card {
+    max-width: none;
   }
 
   .role-grid {
@@ -667,7 +709,66 @@
 
   .role-card {
     max-width: none;
-    min-height: 120px;
+    min-height: 112px;
+    aspect-ratio: auto;
+    padding: 14px 8px;
+  }
+
+  .role-card:hover,
+  .role-card.is-active,
+  .role-card.is-active:hover {
+    transform: translateY(-2px) scale(1.02);
+  }
+
+  .agent-steps__list {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 8px;
+  }
+
+  .agent-steps__label {
+    white-space: normal;
+    font-size: 11px;
+  }
+
+  .agent-steps__num {
+    width: 26px;
+    height: 26px;
+    font-size: 11px;
+  }
+
+  .agents-aside {
+    max-width: none;
+  }
+
+  .live-preview__meta {
+    font-size: 10px;
+  }
+
+  .chat-bubble {
+    max-width: 95%;
+  }
+
+  .create-agent .btn--outline-blue,
+  .create-agent .btn--gradient {
+    min-height: 46px;
+  }
+
+  .demo-modal {
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .demo-modal__dialog {
+    width: 100%;
+    max-width: none;
+    max-height: 100vh;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .demo-modal__messages {
+    min-height: 0;
+    flex: 1;
   }
 
   .agents-panel {
@@ -897,6 +998,24 @@
 
   .role-card {
     max-width: none;
+    min-height: 104px;
+    padding: 12px 6px;
+  }
+
+  .role-card h3 {
+    font-size: 11px;
+  }
+
+  .agents-panel {
+    padding: 32px 12px;
+  }
+
+  .agent-steps__item {
+    gap: 8px;
+  }
+
+  .live-preview {
+    padding: 12px;
   }
 
   .icon-grid {
@@ -962,5 +1081,64 @@
 
   .footer__cols {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Agents desktop layout (≥1101px) ---------- */
+@media (min-width: 1101px) {
+  .agents-layout {
+    grid-template-columns: minmax(0, 1.1fr) minmax(540px, 1fr);
+    gap: 32px;
+    align-items: start;
+  }
+
+  .agents-aside {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(260px, 1fr);
+    grid-template-rows: auto auto;
+    gap: 16px;
+    max-width: none;
+    width: 100%;
+    justify-self: stretch;
+    align-items: stretch;
+  }
+
+  .create-agent {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+  }
+
+  .live-preview {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  .live-preview__chat {
+    flex: 1;
+    min-height: 200px;
+  }
+
+  .roi-card {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .role-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .role-card {
+    aspect-ratio: auto;
+    min-height: 112px;
+    padding: 16px 8px 14px;
+  }
+
+  .role-card h3 {
+    font-size: 11px;
   }
 }

@@ -258,6 +258,28 @@
     <section class="section section--agents" id="agents">
       <div class="container">
         <div class="agents-panel fade-up">
+          <nav class="agent-steps" aria-label="Agent setup progress">
+            <ol class="agent-steps__list">
+              <li class="agent-steps__item is-active" data-step="1">
+                <span class="agent-steps__num">1</span>
+                <span class="agent-steps__label"><strong>Choose Role</strong></span>
+              </li>
+              <li class="agent-steps__item" data-step="2">
+                <span class="agent-steps__num">2</span>
+                <span class="agent-steps__label"><strong>Knowledge</strong></span>
+              </li>
+              <li class="agent-steps__item" data-step="3">
+                <span class="agent-steps__num">3</span>
+                <span class="agent-steps__label"><strong>Connections</strong></span>
+              </li>
+              <li class="agent-steps__item" data-step="4">
+                <span class="agent-steps__num">4</span>
+                <span class="agent-steps__label"><strong>Activate</strong></span>
+              </li>
+            </ol>
+            <div class="agent-steps__bar" aria-hidden="true"><span class="agent-steps__fill" style="width:25%"></span></div>
+          </nav>
+
           <div class="agents-layout">
             <div class="agents-main">
               <header class="agents-header">
@@ -268,39 +290,69 @@
                 </div>
               </header>
 
-              <div class="role-grid">
-                <article class="role-card">
+              <div class="role-grid" id="roleGrid" role="listbox" aria-label="Select agent role">
+                <button type="button" class="role-card is-active" data-role="Customer Service" role="option" aria-selected="true">
                   <span class="role-card__icon" style="--bg:#EDE9FE;--fg:#7C3AED"><i class="fa-solid fa-headset"></i></span>
                   <h3>Customer Service</h3>
-                </article>
-                <article class="role-card">
+                </button>
+                <button type="button" class="role-card" data-role="Sales Assistant" role="option" aria-selected="false">
                   <span class="role-card__icon" style="--bg:#DCFCE7;--fg:#16A34A"><i class="fa-solid fa-chart-line"></i></span>
                   <h3>Sales Assistant</h3>
-                </article>
-                <article class="role-card">
+                </button>
+                <button type="button" class="role-card" data-role="Virtual Receptionist" role="option" aria-selected="false">
                   <span class="role-card__icon" style="--bg:#EDE9FE;--fg:#7C3AED"><i class="fa-solid fa-phone"></i></span>
                   <h3>Virtual Receptionist</h3>
-                </article>
-                <article class="role-card">
+                </button>
+                <button type="button" class="role-card" data-role="Technical Support" role="option" aria-selected="false">
                   <span class="role-card__icon" style="--bg:#DBEAFE;--fg:#2563EB"><i class="fa-solid fa-screwdriver-wrench"></i></span>
                   <h3>Technical Support</h3>
-                </article>
-                <article class="role-card">
+                </button>
+                <button type="button" class="role-card" data-role="Collections Agent" role="option" aria-selected="false">
                   <span class="role-card__icon" style="--bg:#FEE2E2;--fg:#DC2626"><i class="fa-solid fa-dollar-sign"></i></span>
                   <h3>Collections Agent</h3>
-                </article>
-                <article class="role-card">
+                </button>
+                <button type="button" class="role-card" data-role="Order Management" role="option" aria-selected="false">
                   <span class="role-card__icon" style="--bg:#FFEDD5;--fg:#EA580C"><i class="fa-solid fa-box"></i></span>
                   <h3>Order Management</h3>
-                </article>
-                <article class="role-card">
+                </button>
+                <button type="button" class="role-card" data-role="Task Manager" role="option" aria-selected="false">
                   <span class="role-card__icon" style="--bg:#CCFBF1;--fg:#0D9488"><i class="fa-solid fa-circle-check"></i></span>
                   <h3>Task Manager</h3>
-                </article>
-                <article class="role-card">
+                </button>
+                <button type="button" class="role-card" data-role="Executive Assistant" role="option" aria-selected="false">
                   <span class="role-card__icon" style="--bg:#EDE9FE;--fg:#7C3AED"><i class="fa-solid fa-user"></i></span>
                   <h3>Executive Assistant</h3>
-                </article>
+                </button>
+              </div>
+
+              <div class="knowledge-block" id="knowledgeBlock">
+                <div class="knowledge-block__head">
+                  <h3>Knowledge</h3>
+                  <p>Train your agent with documents and connected sources.</p>
+                </div>
+                <div class="knowledge-actions">
+                  <label class="knowledge-btn">
+                    <input type="file" id="uploadPdf" accept=".pdf,application/pdf" hidden />
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>Upload PDF</span>
+                  </label>
+                  <label class="knowledge-btn">
+                    <input type="file" id="uploadDocx" accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" hidden />
+                    <i class="fa-solid fa-file-word"></i>
+                    <span>Upload DOCX</span>
+                  </label>
+                  <button type="button" class="knowledge-btn knowledge-btn--disabled" disabled title="Coming soon">
+                    <i class="fa-brands fa-google-drive"></i>
+                    <span>Connect Google Drive</span>
+                  </button>
+                </div>
+                <div class="knowledge-status" id="knowledgeStatus" hidden>
+                  <i class="fa-solid fa-circle-check"></i>
+                  <div>
+                    <strong>Knowledge Connected</strong>
+                    <span id="knowledgeFileName"></span>
+                  </div>
+                </div>
               </div>
 
               <p class="agents-note">
@@ -308,54 +360,130 @@
               </p>
             </div>
 
-            <form class="create-agent" id="createAgentForm">
-              <h3>Create New Agent</h3>
-              <label class="field">
-                <span>Agent Name</span>
-                <input type="text" value="Customer Support Agent" placeholder="Customer Support Agent" required />
-              </label>
-              <label class="field">
-                <span>Role</span>
-                <select>
-                  <option selected>Customer Service</option>
-                  <option>Sales Assistant</option>
-                  <option>Virtual Receptionist</option>
-                  <option>Technical Support</option>
-                  <option>Collections Agent</option>
-                  <option>Order Management</option>
-                  <option>Task Manager</option>
-                  <option>Executive Assistant</option>
-                </select>
-              </label>
-              <label class="field">
-                <span>Voice</span>
-                <div class="field__voice">
-                  <select>
-                    <option selected>Emma (Natural)</option>
-                    <option>James (Professional)</option>
-                    <option>Sofia (Friendly)</option>
-                    <option>Marcus (Calm)</option>
+            <aside class="agents-aside">
+              <form class="create-agent" id="createAgentForm">
+                <h3>Create New Agent</h3>
+                <label class="field">
+                  <span>Agent Name</span>
+                  <input type="text" id="agentName" value="Customer Support Agent" placeholder="Customer Support Agent" required />
+                </label>
+                <label class="field">
+                  <span>Role</span>
+                  <select id="agentRole">
+                    <option selected>Customer Service</option>
+                    <option>Sales Assistant</option>
+                    <option>Virtual Receptionist</option>
+                    <option>Technical Support</option>
+                    <option>Collections Agent</option>
+                    <option>Order Management</option>
+                    <option>Task Manager</option>
+                    <option>Executive Assistant</option>
                   </select>
-                  <button type="button" class="voice-play" aria-label="Preview voice"><i class="fa-solid fa-play"></i></button>
+                </label>
+                <label class="field">
+                  <span>Industry</span>
+                  <select id="agentIndustry">
+                    <option selected>Restaurant</option>
+                    <option>Clinic</option>
+                    <option>Real Estate</option>
+                    <option>E-commerce</option>
+                    <option>Education</option>
+                    <option>Legal</option>
+                    <option>Finance</option>
+                    <option>Construction</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>Voice</span>
+                  <div class="field__voice">
+                    <select id="agentVoice">
+                      <option selected>Emma (Natural)</option>
+                      <option>James (Professional)</option>
+                      <option>Sofia (Friendly)</option>
+                      <option>Marcus (Calm)</option>
+                    </select>
+                    <button type="button" class="voice-play" aria-label="Preview voice"><i class="fa-solid fa-play"></i></button>
+                  </div>
+                </label>
+                <label class="field">
+                  <span>Language</span>
+                  <select id="agentLanguage">
+                    <option selected>English</option>
+                    <option>English (UK)</option>
+                    <option>Spanish</option>
+                    <option>French</option>
+                    <option>German</option>
+                    <option>Arabic</option>
+                    <option>Urdu</option>
+                  </select>
+                </label>
+                <button type="button" class="btn btn--outline-blue btn--block" id="tryDemoBtn">
+                  <i class="fa-solid fa-comments"></i> Try Demo
+                </button>
+                <button type="submit" class="btn btn--gradient btn--block" id="createAgentBtn">Create Agent</button>
+              </form>
+
+              <div class="live-preview" id="livePreview" aria-live="polite">
+                <div class="live-preview__head">
+                  <h4>Live Preview</h4>
+                  <span class="live-preview__meta" id="previewMeta">Emma · English</span>
                 </div>
-              </label>
-              <label class="field">
-                <span>Language</span>
-                <select>
-                  <option selected>English</option>
-                  <option>English (UK)</option>
-                  <option>Spanish</option>
-                  <option>French</option>
-                  <option>German</option>
-                  <option>Arabic</option>
-                </select>
-              </label>
-              <button type="submit" class="btn btn--gradient btn--block">Create Agent</button>
-            </form>
+                <div class="live-preview__chat" id="previewChat">
+                  <div class="chat-bubble chat-bubble--user" id="previewUserBubble">
+                    <span class="chat-bubble__label">Customer</span>
+                    <p id="previewUserMsg"></p>
+                  </div>
+                  <div class="chat-bubble chat-bubble--ai" id="previewAiBubble">
+                    <span class="chat-bubble__label">AI Agent</span>
+                    <div class="typing-dots" id="previewTyping" hidden>
+                      <span></span><span></span><span></span>
+                    </div>
+                    <p id="previewAiMsg"></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="roi-card" id="roiCard">
+                <h4>Estimated Results</h4>
+                <ul class="roi-card__list">
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Automate <strong data-roi="automate">70</strong>% of customer inquiries</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Save up to <strong data-roi="hours">15</strong> hours per week</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Reduce response time by <strong data-roi="response">90</strong>%</span>
+                  </li>
+                </ul>
+              </div>
+            </aside>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Try Demo Modal -->
+    <div class="demo-modal" id="demoModal" hidden>
+      <div class="demo-modal__backdrop" data-close-demo></div>
+      <div class="demo-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+        <header class="demo-modal__header">
+          <div>
+            <h3 id="demoModalTitle">Try Your AI Agent</h3>
+            <p id="demoModalSub">Customer Service · Restaurant · English</p>
+          </div>
+          <button type="button" class="demo-modal__close" data-close-demo aria-label="Close demo">&times;</button>
+        </header>
+        <div class="demo-modal__messages" id="demoMessages"></div>
+        <form class="demo-modal__composer" id="demoChatForm">
+          <input type="text" id="demoChatInput" placeholder="Type a message…" autocomplete="off" required />
+          <button type="submit" class="btn btn--gradient" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
 
     <!-- ========== SECTION 3: OMNICHANNEL ========== -->
     <section class="section section--omnichannel" id="omnichannel">
@@ -823,5 +951,6 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/agents.js"></script>
 </body>
 </html>

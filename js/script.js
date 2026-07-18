@@ -491,23 +491,6 @@
     }, 150);
   });
 
-  /* ---------- Create Agent Form ---------- */
-  const form = document.getElementById("createAgentForm");
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      const original = btn.textContent;
-      btn.textContent = "Agent Created ✓";
-      btn.style.pointerEvents = "none";
-      setTimeout(() => {
-        btn.textContent = original;
-        btn.style.pointerEvents = "";
-        form.reset();
-      }, 2000);
-    });
-  }
-
   /* ---------- Voice Preview Button ---------- */
   document.querySelectorAll(".voice-play").forEach((btn) => {
     btn.addEventListener("click", () => {
